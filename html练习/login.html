@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <style>
+        /* 页面背景，用同文件夹里的 bg.svg */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-image: url("bg.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 中间的登录框 */
+        .login-box {
+            width: 320px;
+            margin: 120px auto;
+            padding: 30px;
+            background-color: white;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+        }
+
+        .tip {
+            text-align: center;
+            color: #888888;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            height: 32px;
+            box-sizing: border-box;
+            padding-left: 8px;
+            border: 1px solid #cccccc;
+        }
+
+        button {
+            width: 100%;
+            height: 36px;
+            margin-top: 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>用户登录</h2>
+        <p class="tip">请输入用户名和密码</p>
+
+        <!-- 登录表单 -->
+        <form>
+            <label>用户名</label>
+            <input type="text" id="username" placeholder="请输入用户名">
+
+            <label>密码</label>
+            <input type="password" id="password" placeholder="请输入密码">
+
+            <button type="button" onclick="login()">登录</button>
+        </form>
+    </div>
+
+    <script>
+        // 点击登录按钮后执行
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // 这里先不判断对错，不管输入什么都提示成功
+            alert("登录成功！");
+        }
+    </script>
+</body>
+</html>
